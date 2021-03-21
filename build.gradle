@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.alaor.ask'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'com.amazon.alexa:ask-sdk:2.17.2'
+    compile 'com.amazonaws:aws-lambda-java-log4j2:1.1.0'
+}
+
+jar {
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
