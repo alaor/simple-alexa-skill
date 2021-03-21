@@ -19,7 +19,7 @@ public class CustomLaunchRequestHandler implements LaunchRequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input, LaunchRequest launchRequest) {
         return input.getResponseBuilder()
-                .withSpeech("E aí Alaor, finalmente resolveu treinar né! Onde deseja treinar hoje?")
+                .withSpeech("E aí Alaor, finalmente resolveu treinar, né! Onde deseja treinar hoje?")
                 .build();
     }
 }
